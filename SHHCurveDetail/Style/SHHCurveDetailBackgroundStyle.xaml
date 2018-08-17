@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Detail="clr-namespace:SHH.UI.Curve.Detail">
+    <Style x:Key="SHHCurveDetailBackgroundStyle" TargetType="{x:Type ContentControl}">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="176"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--图例-->
+                            <Detail:SHHCurveDetailLegend x:Name="legend" Grid.Column="2" Grid.RowSpan="2"/>
+                            <!--X轴-->
+                            <Detail:SHHCurveDetailAxisX x:Name="axisX" Grid.Row="1" Grid.ColumnSpan="2" />
+                            <!--Y轴和背景线条-->
+                            <Detail:SHHCurveDetailAxisY x:Name="axisY" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>

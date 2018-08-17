@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.dll
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.pdb
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.dll
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.pdb
+C:\Users\Administrator\source\repos\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.dll
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.pdb
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.dll
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.pdb
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.csprojResolveAssemblyReference.cache
+F:\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.dll
+F:\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHCurveCore.pdb
+F:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.csproj.CoreCompileInputs.cache
+F:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.dll
+F:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHCurveCore.pdb

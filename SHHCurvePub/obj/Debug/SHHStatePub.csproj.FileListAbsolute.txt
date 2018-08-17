@@ -1,0 +1,5 @@
+D:\SHHCurveThumbnail\SHHCurvePub\bin\Debug\SHHStatePub.dll
+D:\SHHCurveThumbnail\SHHCurvePub\bin\Debug\SHHStatePub.pdb
+D:\SHHCurveThumbnail\SHHCurvePub\obj\Debug\SHHStatePub.csproj.CoreCompileInputs.cache
+D:\SHHCurveThumbnail\SHHCurvePub\obj\Debug\SHHStatePub.dll
+D:\SHHCurveThumbnail\SHHCurvePub\obj\Debug\SHHStatePub.pdb

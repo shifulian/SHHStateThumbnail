@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Thumbnail="clr-namespace:SHH.UI.Curve.Thumbnail;assembly=SHHStateThumbnail"
+        xmlns:Detail="clr-namespace:SHH.UI.Curve.Detail;assembly=SHHStateDetail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1370" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" >
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="154"/>
+        </Grid.ColumnDefinitions>
+        <UniformGrid Grid.Row="1" Rows="1">
+            <Button Content="放大" Click="Button_Click"/>
+            <Button Content="缩小" Click="Button_Click"/>
+            <Button Content="X轴放大" Click="Button_Click"/>
+            <Button Content="X轴缩小" Click="Button_Click"/>
+            <Button Content="Y轴放大" Click="Button_Click"/>
+            <Button Content="Y轴缩小" Click="Button_Click"/>
+            <Button Content="++X轴标签" Click="Button_Click"/>
+            <Button Content="--X轴标签" Click="Button_Click"/>
+            <Button Content="++Y轴标签" Click="Button_Click"/>
+            <Button Content="--Y轴标签" Click="Button_Click"/>
+            <Button Content="密度增加" Click="Button_Click"/>
+            <Button Content="密度减少" Click="Button_Click"/>
+            <!--<Button Content="启用圆点" Click="Button_Click"/>-->
+            <Button Content="显示标尺" Click="Button_Click"/>
+            <Button Content="显示提示" Click="Button_Click"/>
+            <Button Content="原始尺寸" Click="Button_Click"/>
+            <Button Content="全屏显示" Click="Button_Click"/>
+            <Button Content="下载" Click="Button_Click"/>
+        </UniformGrid>
+
+        <Detail:SHHCurveDetail x:Name="detail" Grid.ColumnSpan="2"></Detail:SHHCurveDetail>
+        <Thumbnail:SHHCurveThumbnail x:Name="thumbnail" OnDataChanged="Thumbnail_OnDataChanged" Grid.Row="2" />
+    </Grid>
+</Window>

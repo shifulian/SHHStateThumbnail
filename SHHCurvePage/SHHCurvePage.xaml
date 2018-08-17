@@ -1,0 +1,312 @@
+﻿<Window x:Class="SHH.CurvePage.UI.SHHCurvePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Thumbnail="clr-namespace:SHH.UI.Curve.Thumbnail;assembly=SHHStateThumbnail"
+        xmlns:Detail="clr-namespace:SHH.UI.Curve.Detail;assembly=SHHStateDetail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="763" Width="1370" Loaded="Window_Loaded" Background="#E6E6E6" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ConfigurationCurveButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/CommonListViewStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid  Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="1019*"/>
+            <ColumnDefinition Width="154"/>
+        </Grid.ColumnDefinitions>
+
+        <!--背景填充-->
+        <Border Background="White" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,0,2"/>
+        <Border Background="White" Grid.Row="3" Grid.ColumnSpan="3" Margin="0,0,0,2"/>
+
+        <!--顶部菜单-->
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Background="#F6F7FB">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" TextElement.FontSize="12" TextElement.FontFamily="微软雅黑" >
+                <!--<Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>-->
+                <!--<TextBlock x:Name="label_Style" Text="曲线显示方式" VerticalAlignment="Center" Foreground="#7F7F7F" />-->
+                <!--<Button x:Name="button_Style" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/DisplayMode.png"/>
+                    </Button.Background>
+                </Button>-->
+                
+                
+                <!--<Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>
+                <Button x:Name="btn_ZoomIn" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/+.png"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock Text="{Binding ElementName=detail,Path=ZoomPercent,StringFormat={}{0:P0}}" VerticalAlignment="Center" Foreground="#7F7F7F"/>
+                <Button x:Name="btn_ZoomOut" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/-.png"/>
+                    </Button.Background>
+                </Button>-->
+                
+                
+                <Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>
+                <TextBlock Text="原始尺寸" VerticalAlignment="Center" Foreground="#7F7F7F" />
+                <Button x:Name="btn_StoreSize" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Restore.png"/>
+                    </Button.Background>
+                </Button>
+                <Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>
+                <TextBlock Text="全屏显示" VerticalAlignment="Center" Foreground="#7F7F7F" />
+                <Button x:Name="btn_FullScreen" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/FullScreen.png"/>
+                    </Button.Background>
+                </Button>
+                <Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>
+                <TextBlock Text="下载" VerticalAlignment="Center" Foreground="#7F7F7F" />
+                <Button x:Name="btn_DownLoad" Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Download.png"/>
+                    </Button.Background>
+                </Button>
+                <Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>
+                <!--<TextBlock x:Name="btn_Search" Text="搜索" VerticalAlignment="Center" Foreground="#7F7F7F"/>
+                <Button Width="16" Height="16" Margin="10,0,10,0" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Search.png"/>
+                    </Button.Background>
+                </Button>
+                <Border Width="1" Background="#FFE6E6E6" Margin="10,0,10,0" Height="25"/>-->
+            </StackPanel>
+        </Border>
+
+        <!--曲线配置-->
+        <Border Grid.Column="2" Grid.Row="3" Margin="5,10,10,10" BorderBrush="#DFDFDF" BorderThickness="1,0,0,0">
+            <Grid Margin="10,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btn_DoubleLeft" Margin="6,0,0,2" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/DoubleLeft.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btn_LeftMove" Grid.Column="1" Margin="6,0,0,2" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Left.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btn_RightMove" Grid.Column="2" Margin="0,0,6,2" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Right.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btn_DoubleRight" Grid.Column="3" Margin="0,0,6,2" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/DoubleRight.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btn_ConfigurationCurve" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Content="状态配置" Style="{StaticResource ConfigurationCurveButtonStyle}" Click="Button_Click"/>
+            </Grid>
+        </Border>
+
+        <!--中间菜单-->
+        <UniformGrid Grid.Row="2" Rows="1" Grid.ColumnSpan="3" Background="#F6F7FB">
+            <!--<Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="Y轴放大" />
+                    <Button x:Name="btn_ZoomInAxisY" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/Y_Axis_Up.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,4">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="Y轴缩小" />
+                    <Button x:Name="btn_ZoomOutAxisY" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/Y_Axis_Down.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>-->
+
+
+            <!--<Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="X轴放大" />
+                    <Button x:Name="btn_ZoomInAxisX" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/X_Axis_Up.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,4">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="X轴缩小" />
+                    <Button x:Name="btn_ZoomOutAxisX" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/X_Axis_Down.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>-->
+
+
+            <!--<Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,4">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="启用圆点" />
+                    <Button x:Name="btn_ChangeCapShow" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/EnableDots.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>-->
+            <Border BorderBrush="#8A83E2" BorderThickness="0,0,0,2" Margin="0,0,-1,0">
+                <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="显示标尺" />
+                        <Button x:Name="btn_ChangeRulerShow" Width="16" Height="16" Margin="3,5,3,5" Style="{StaticResource ImageButtonStyle}" Click="Button_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/DisplayRuler.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Border>
+           
+            <!--<Border BorderBrush="#70A4DE" BorderThickness="0,0,0,2" Margin="-1,0,-1,0">
+                <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                    -->
+            <!--<Border HorizontalAlignment="Center">-->
+            <!--<TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="最小值 Min" />-->
+            <!--</Border>-->
+            <!--
+                    <ToggleButton Content="最小值 Min"  Foreground="#80807E" Background="Transparent" BorderThickness="0" IsChecked="{Binding Path=IsMinShow}"/>
+                </Border>
+            </Border>
+            <Border BorderBrush="#6FDE92" BorderThickness="0,0,0,2" Margin="-1,0,-1,0">
+                <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                    -->
+            <!--<Border HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="最大值 Max" />
+                    </Border>-->
+            <!--
+                    <ToggleButton Content="最大值 Max"  Foreground="#80807E" Background="Transparent" BorderThickness="0" IsChecked="{Binding Path=IsMaxShow}"/>
+                </Border>
+            </Border>
+            <Border BorderBrush="#BCDE70" BorderThickness="0,0,0,2" Margin="-1,0,-1,0">
+                <Border BorderBrush="#E6E6E6" BorderThickness="0,0,1,0" Margin="0,2,0,2">
+                    -->
+            <!--<Border HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center" Foreground="#80807E" Margin="0,0,0,0" Text="平均值 Avg" />
+                    </Border>-->
+            <!--
+                    <ToggleButton Content="平均值 Avg"  Foreground="#80807E" Background="Transparent" BorderThickness="0" IsChecked="{Binding Path=IsAvgShow}"/>
+                </Border>
+            </Border>
+            <Border>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Text="Y轴最大值 :"/>
+                    <TextBlock VerticalAlignment="Center" TextDecorations="UnderLine" Foreground="LightBlue" Text="{Binding ElementName=detail,Path=MaxValue}" Margin="5,0,5,0"/>
+                    -->
+            <!--<StackPanel Height="20" Width="10" >
+                        <Button Width="10" Height="10" Style="{StaticResource ImageButtonStyle}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/up.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="10" Height="10" Style="{StaticResource ImageButtonStyle}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/down.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>-->
+            <!--
+                </StackPanel>
+            </Border>
+            <Border>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Foreground="#80807E" Text="Y轴最小值 :"/>
+                    <TextBlock VerticalAlignment="Center" TextDecorations="UnderLine" Foreground="LightBlue" Text="{Binding ElementName=detail,Path=MinValue}" Margin="5,0,5,0" />
+                    -->
+            <!--<StackPanel Height="20" Width="10" >
+                        <Button Width="10" Height="10" Style="{StaticResource ImageButtonStyle}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/up.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="10" Height="10" Style="{StaticResource ImageButtonStyle}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/down.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>-->
+            <!--
+                </StackPanel>
+            </Border>-->
+           
+        </UniformGrid>
+
+
+        <!--缩略图-->
+        <Thumbnail:SHHCurveThumbnail Grid.Row="3" Margin="0,0,0,2" x:Name="thumbnail" OnDataChanged="Thumbnail_OnDataChanged" Grid.ColumnSpan="2"/>
+
+        <!--列表-->
+        <ListView x:Name="listView" HorizontalContentAlignment="Center" Grid.Row="4" Height="242" Grid.ColumnSpan="3" BorderThickness="0" Style="{StaticResource CommonListViewStyle}" Background="White">
+            <ListView.View>
+                <GridView>
+                    <!--<GridViewColumn Header="编号" Width="100" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="名称" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="地点" Width="200" DisplayMemberBinding="{Binding Place}"/>
+                    <GridViewColumn Header="单位" Width="200" DisplayMemberBinding="{Binding Unit}"/>
+                    <GridViewColumn Header="最大值" Width="150" DisplayMemberBinding="{Binding MaxValue}"/>
+                    <GridViewColumn Header="平均值" Width="150" DisplayMemberBinding="{Binding AvgValue}"/>
+                    <GridViewColumn Header="最小值" Width="150" DisplayMemberBinding="{Binding MinValue}"/>
+                    <GridViewColumn Header="标尺时间" Width="200" DisplayMemberBinding="{Binding Time}"/>-->
+
+                    <GridViewColumn Header="编号" Width="100" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="名称" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="地点" Width="150" DisplayMemberBinding="{Binding Place}"/>
+                    <GridViewColumn Header="状态" Width="150" DisplayMemberBinding="{Binding State}"/>
+                    <GridViewColumn Header="开始时间" Width="150" DisplayMemberBinding="{Binding StartTime}"/>
+                    <GridViewColumn Header="结束时间" Width="150" DisplayMemberBinding="{Binding EndTime}"/>
+                    <GridViewColumn Header="累计时间" Width="150" DisplayMemberBinding="{Binding CountTime}"/>
+                    <GridViewColumn Header="标尺时间" Width="150" DisplayMemberBinding="{Binding RulerTime}"/>
+                    <GridViewColumn Header="动作次数" Width="150" DisplayMemberBinding="{Binding RunTimes}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--曲线图-->
+        <!--缺少这层Border会导致截图异常-->
+        <Border Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,0,2">
+            <Detail:SHHCurveDetail x:Name="detail"/>
+            <!--<Detail:SHHCurveDetail x:Name="detail" OnRulerMove="Detail_OnRulerMove"/>-->
+        </Border>
+    </Grid>
+</Window>

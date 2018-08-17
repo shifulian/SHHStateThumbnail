@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{390AB940-3729-4A19-A375-6D8067DE075C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SHH.CurvePage</RootNamespace>
+    <AssemblyName>SHHStatePage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SHH.CurvePage.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLL, Version=3.2018.7.12, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SHHCurveRes\DLL\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL">
+      <HintPath>..\SHHCurveRes\DLL\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataFactory">
+      <HintPath>..\SHHCurveRes\DLL\DataFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="IDAL">
+      <HintPath>..\SHHCurveRes\DLL\IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="LogProject">
+      <HintPath>..\SHHCurveRes\DLL\LogProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Model">
+      <HintPath>..\SHHCurveRes\DLL\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="SHHCurvePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\SHHCurveManager.cs" />
+    <Compile Include="BLL\SHHCurveConverter.cs" />
+    <Compile Include="Model\BrokenLineCapTypeCollection.cs" />
+    <Compile Include="SHHCurvePage.xaml.cs">
+      <DependentUpon>SHHCurvePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\CommonScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ConfigurationCurveButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\CommonListViewStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SHHCurveConfigPage\SHHStateConfigPage.csproj">
+      <Project>{5579ebd9-ebe2-49b0-95c7-9bd8937170c6}</Project>
+      <Name>SHHStateConfigPage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHHCurveCore\SHHStateCore.csproj">
+      <Project>{001eaa98-3369-4d51-b196-7cc9eca4e892}</Project>
+      <Name>SHHStateCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHHCurveDetail\SHHStateDetail.csproj">
+      <Project>{13759a3e-3b8e-4bba-bcde-e517920e7dd8}</Project>
+      <Name>SHHStateDetail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHHCurvePub\SHHStatePub.csproj">
+      <Project>{4857fd22-f6ab-4a8d-8eea-e45e2e486dda}</Project>
+      <Name>SHHStatePub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHHCurveRes\SHHStateRes.csproj">
+      <Project>{e8b1cd5f-8985-4743-986e-b711d2ac1120}</Project>
+      <Name>SHHStateRes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHHCurveThumbnail\SHHStateThumbnail.csproj">
+      <Project>{6204cb95-e653-4976-824c-71924f3b29fd}</Project>
+      <Name>SHHStateThumbnail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\+.png" />
+    <Resource Include="Images\-.png" />
+    <Resource Include="Images\DisplayMode.png" />
+    <Resource Include="Images\DisplayRuler.png" />
+    <Resource Include="Images\DoubleLeft.png" />
+    <Resource Include="Images\DoubleRight.png" />
+    <Resource Include="Images\down.png" />
+    <Resource Include="Images\Download.png" />
+    <Resource Include="Images\EnableDots.png" />
+    <Resource Include="Images\FullScreen.png" />
+    <Resource Include="Images\KJ770曲线图21.jpg" />
+    <Resource Include="Images\KJ770曲线图3弹窗.jpg" />
+    <Resource Include="Images\Left.png" />
+    <Resource Include="Images\Restore.png" />
+    <Resource Include="Images\Right.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\up.png" />
+    <Resource Include="Images\Y_Axis_Down.png" />
+    <Resource Include="Images\Y_Axis_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\X_Axis_Down.png" />
+    <Resource Include="Images\X_Axis_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

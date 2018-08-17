@@ -1,0 +1,6 @@
+D:\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHStateCore.dll
+D:\SHHCurveThumbnail\SHHCurveCore\bin\Debug\SHHStateCore.pdb
+D:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHStateCore.csprojAssemblyReference.cache
+D:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHStateCore.csproj.CoreCompileInputs.cache
+D:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHStateCore.dll
+D:\SHHCurveThumbnail\SHHCurveCore\obj\Debug\SHHStateCore.pdb

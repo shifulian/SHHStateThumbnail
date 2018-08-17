@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveRes\bin\Release\SHHCurveResource.dll
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveRes\bin\Release\SHHCurveResource.pdb
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveRes\obj\Release\SHHCurveRes.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveRes\obj\Release\SHHCurveResource.dll
+C:\Users\Administrator\Desktop\SHHCurveThumbnail\SHHCurveRes\obj\Release\SHHCurveResource.pdb

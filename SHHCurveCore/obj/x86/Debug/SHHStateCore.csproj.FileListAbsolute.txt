@@ -1,0 +1,11 @@
+D:\SHHCurveThumbnail\SHHCurveCore\bin\x86\Debug\SHHStateCore.dll
+D:\SHHCurveThumbnail\SHHCurveCore\bin\x86\Debug\SHHStateCore.pdb
+D:\SHHCurveThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.csproj.CoreCompileInputs.cache
+D:\SHHCurveThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.dll
+D:\SHHCurveThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.pdb
+D:\SHHStateThumbnail\SHHCurveCore\bin\x86\Debug\SHHStateCore.dll
+D:\SHHStateThumbnail\SHHCurveCore\bin\x86\Debug\SHHStateCore.pdb
+D:\SHHStateThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.csprojAssemblyReference.cache
+D:\SHHStateThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.csproj.CoreCompileInputs.cache
+D:\SHHStateThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.dll
+D:\SHHStateThumbnail\SHHCurveCore\obj\x86\Debug\SHHStateCore.pdb

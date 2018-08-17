@@ -1,0 +1,12 @@
+D:\SHHCurveThumbnail\SHHCurveRes\bin\x86\Debug\SHHStateResource.dll
+D:\SHHCurveThumbnail\SHHCurveRes\bin\x86\Debug\SHHStateResource.pdb
+D:\SHHCurveThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateRes.csproj.CoreCompileInputs.cache
+D:\SHHCurveThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateResource.dll
+D:\SHHCurveThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateResource.pdb
+D:\SHHCurveThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateRes.csprojAssemblyReference.cache
+D:\SHHStateThumbnail\SHHCurveRes\bin\x86\Debug\SHHStateResource.dll
+D:\SHHStateThumbnail\SHHCurveRes\bin\x86\Debug\SHHStateResource.pdb
+D:\SHHStateThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateRes.csprojAssemblyReference.cache
+D:\SHHStateThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateRes.csproj.CoreCompileInputs.cache
+D:\SHHStateThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateResource.dll
+D:\SHHStateThumbnail\SHHCurveRes\obj\x86\Debug\SHHStateResource.pdb

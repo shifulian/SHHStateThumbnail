@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Pub="clr-namespace:SHH.UI.Curve.Pub;assembly=SHHStatePub"
+                    xmlns:Detail="clr-namespace:SHH.UI.Curve.Detail"
+                    xmlns:Behavior="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:local="clr-namespace:SHH.UI.Curve.Detail.Behaviors">
+    <Style x:Key="SHHCurveDetailDrawStyle" TargetType="{x:Type ContentControl}">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <Canvas x:Name="canvas" Background="Transparent">
+                            <!--<ContentControl x:Name="drawingCanvasHost" Width="{Binding ElementName=canvas,Path=ActualWidth}" Height="{Binding ElementName=canvas,Path=ActualHeight}"/>-->
+                            <Pub:DrawingCanvas x:Name="drawingCanvas" Width="{Binding ElementName=canvas,Path=ActualWidth}" Height="{Binding ElementName=canvas,Path=ActualHeight}"/>
+                            <Detail:RulerContentControl x:Name="ruler" Height="{Binding ElementName=canvas,Path=ActualHeight}">
+                                <Behavior:Interaction.Behaviors>
+                                    <local:RulerDragBehavior/>
+                                    <local:RulerJumpBehavior/>
+                                </Behavior:Interaction.Behaviors>
+                            </Detail:RulerContentControl>
+                            <TextBlock x:Name="tbk_Tip" Visibility="Collapsed"/>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>
